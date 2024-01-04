@@ -713,7 +713,7 @@ $(document).on("click", ".confirmSaleResponse", function () {
     showLoaderOnConfirm: !0,
   }).then((result) => {
     if (result.value) {
-      var newUrl = base_url + "confirmsaleresponse/" + id;
+      var newUrl = base_url + "confirmsaleresponse/"+id;
       changeURL(newUrl, "Paper Confirm Response");
       getConfirmSaleResponse(id);
     }
@@ -724,7 +724,7 @@ function getConfirmSaleResponse(id) {
   // alert(id)
   $(".page-content-area").html(pageLoader);
   $.post(
-    base_url + "get-confirmsaleresponse/" + id,
+    base_url + "get-confirmsaleresponse/"+id,
     { page: "confirmsaleresponse" },
     function (data) {
       $(".page-content-area").html(data);

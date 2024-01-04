@@ -126,10 +126,6 @@
                                                     $array = explode(',', $string); //split string into array seperated by ', '
                                                     foreach($array as $value) //loop over values
                                                     {
-                                                        // print_r($value);
-                                                        // foreach ($value as $key => $v) {
-                                                            
-                                                        // }
                                                         if ($value=='mill_name') {
                                                             echo '';
                                                         }

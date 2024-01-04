@@ -1239,6 +1239,7 @@ function getResponseSpecification(rid = '') {
         if (data) {
 
             arr = JSON.parse(data);
+            // console.log(arr.counter_status.counterstatus)
             cdata = '';
             if (arr.success == true) {
                 var specification = arr.specification;
@@ -1253,11 +1254,21 @@ function getResponseSpecification(rid = '') {
                     if (data == 'quantity_type') { }
                     else if (data == 'product_form') { }
                     else if (data == 'rate') { }
-                    else { cdata += '<th class="labeltext font-w600">' + str_array[i].replace(/_/g, " ") + '</th>'; }
+                    else if (data == 'mill_name') { }
+                    else if (data == 'size_uom') { }
+                    else if (data == 'quantity_uom') { }
+                    else if (data == 'min_quantity_uom') { }
+                    else if (data == 'sub_category') {cdata += '<th class="labeltext font-w600 text-center">' + str_array[i].replace(/_/g, "<br> ") + '</th>'; }
+                    else if (data == 'min_quantity_per_gsm') {cdata += '<th class="labeltext font-w600 text-center">' + str_array[i].replace(/_/g, " ").replace(/^(.*?\s.*?)\s(.*)$/, '$1<br>$2') + '</th>';}
+                    else if (data == 'min_quantity_pertruck') {cdata += '<th class="labeltext font-w600 text-center">' + str_array[i].replace(/_/g, " ").replace(/^(.*?\s.*?)\s(.*)$/, '$1<br>$2') + '</th>';}
+                    else if (data == 'packing_per_ream') {cdata += '<th class="labeltext font-w600 text-center">' + str_array[i].replace(/_/g, " ").replace(/^(.*?\s.*?)\s(.*)$/, '$1<br>$2') + '</th>';}
+                    // modifiedString = originalString.replace(/^(.*?\s.*?)\s(.*)$/, '$1-$2');
+                    else { cdata += '<th class="labeltext font-w600" style="vertical-align:middle">' + str_array[i].replace(/_/g, " ") + '</th>'; }
                 }
-
-                cdata += '<th > Final Quantity</th>'; 
-                cdata += '<th > Final Rate</th>'; 
+                if (arr.counter_status.counterstatus==1) {
+                    cdata += '<th style="vertical-align:middle" > Final Quantity</th>'; 
+                    cdata += '<th style="vertical-align:middle" > Final Rate</th>';  
+                }
                 cdata += '</tr>';
                 for (ii in list) {
                     cdata += '<tr>';
@@ -1267,14 +1278,19 @@ function getResponseSpecification(rid = '') {
                         if (data == 'quantity_type') { }
                         else if (data == 'product_form') { }
                         else if (data == 'rate') { }
+                        else if (data == 'quantity_uom') { }
+                        else if (data == 'min_quantity_uom') { }
+                        else if (data == 'mill_name') { }
+                        else if (data == 'size_uom') { }
                         else if (data == 'sub_category') { cdata += '<td >' + list[ii]['cname'] + '</td>'; }
 
                         else if (data == 'brand_name') { cdata += '<td >' + list[ii]['bname'] + '</td>'; }
                         else { cdata += '<td >' + list[ii][data] + '</td>'; }
                     }
-
-                    cdata += '<td > ' + list[ii].rqty + '</td>'; 
-                    cdata += '<td > ' + list[ii].rrate + '</td>'; 
+                    if (arr.counter_status.counterstatus==1) {
+                        cdata += '<td > ' + list[ii].rqty + '</td>'; 
+                        cdata += '<td > ' + list[ii].rrate + '</td>';  
+                    }
                     cdata += '</tr>';
                 }
 
@@ -1303,7 +1319,7 @@ function getResponsedata(rid = '') {
         if (data) {
             arr = JSON.parse(data); 
             let papercat = arr.id.category;
-            cdata = '<td></td><td >Response </td>';
+            cdata = '<td >Response </td>';
             if (arr.success == true) {
                 var specification = arr.specification;
                 var required = arr['id'].required;
@@ -1336,10 +1352,10 @@ function getResponsedata(rid = '') {
                             cdata +='<td></td>';
                         }else{
                             if (listspecdata[data] == 0 || listspecdata[data] == '') {
-                                cdata += '<td >  <select  class="form-control seleinput " id="' + data + listspecdata['id'] + '" name="' + data + '[]" '+req+' >  <option value="">Choose..</option> <option value="inch">inch</option><option value="cm">cm</option></select></td>';
+                                // cdata += '<td >  <select  class="form-control seleinput " id="' + data + listspecdata['id'] + '" name="' + data + '[]" '+req+' >  <option value="">Choose..</option> <option value="inch">inch</option><option value="cm">cm</option></select></td>';
                             }
                             else {
-                                cdata += '<td >' + listspecdata[data] + ' <input type="hidden" value="' + listspecdata[data] + '" name="' + data + '[]"></td>';
+                                // cdata += '<td >' + listspecdata[data] + ' <input type="hidden" value="' + listspecdata[data] + '" name="' + data + '[]"></td>';
                             }
                         }
                         
@@ -1348,7 +1364,7 @@ function getResponsedata(rid = '') {
                         if(papercat == 9){
                             cdata +='<td id="lt_id" lt_id="'+listspecdata['id']+'"> <select  class="form-control seleinput " name="' + data + '[]" id="' + data + listspecdata['id'] + '" >  <option value="">Choose..</option> <option value="a3">A3</option><option value="a4">A4</option><option value="a5">A5</option></select></td>';
                         }else{
-                            cdata += '<td id="lt_id" lt_id="'+listspecdata['id']+'"> <input type="text" class="form-control '+req+'" name="' + data + '[]" id="' + data + listspecdata['id'] + '" value="' + listspecdata[data] + '" placeholder="' + data.replace(/_/g, " ") + '" ></td>';
+                            cdata += '<td id="lt_id" lt_id="'+listspecdata['id']+'" class="d-flex" style="width:100px"> <input type="text" class="form-control '+req+'" name="' + data + '[]" id="' + data + listspecdata['id'] + '" value="' + listspecdata[data] + '" placeholder="' + data.replace(/_/g, " ") + '" ><select  class="form-control seleinput " name="' + data + '[]" id="' + data + listspecdata['id'] + '" > <option value="in">inch</option><option value="cm">cm</option></select></td>';
 
                         } 
                     }
@@ -1361,16 +1377,17 @@ function getResponsedata(rid = '') {
                         } 
                     }
                     
+                    else if (data == 'size_uom') {}
                     else if (data == 'quantity_type') {
-                        cdata += '<td ><div class="field drop-select mt-3">  <select  class="form-control seleinput  qty" id="' + data + listspecdata['id'] + '" name="' + data + '[]" >  <option value="1" ';
-                        if (listspecdata[data] == '1') { cdata += 'selected'; }else{cdata+="disabled"}
-                        cdata += '>Godown</option><option value="2" ';
-                        if (listspecdata[data] == '2') { cdata += 'selected'; }else{cdata+="disabled"}
-                        cdata += '>Truck Load</option><option value="3" ';
-                        if (listspecdata[data] == '3') { cdata += 'selected'; }else{cdata+="disabled"}
-                        cdata += '>Part Load</option><option value="0" ';
-                        if (listspecdata[data] == '0') { cdata += 'selected'; }else{cdata+="disabled"}
-                        cdata += '>NA</option></select> </div> </td>';
+                        // cdata += '<td ><div class="field drop-select mt-3">  <select  class="form-control seleinput  qty" id="' + data + listspecdata['id'] + '" name="' + data + '[]" >  <option value="1" ';
+                        // if (listspecdata[data] == '1') { cdata += 'selected'; }else{cdata+="disabled"}
+                        // cdata += '>Godown</option><option value="2" ';
+                        // if (listspecdata[data] == '2') { cdata += 'selected'; }else{cdata+="disabled"}
+                        // cdata += '>Truck Load</option><option value="3" ';
+                        // if (listspecdata[data] == '3') { cdata += 'selected'; }else{cdata+="disabled"}
+                        // cdata += '>Part Load</option><option value="0" ';
+                        // if (listspecdata[data] == '0') { cdata += 'selected'; }else{cdata+="disabled"}
+                        // cdata += '>NA</option></select> </div> </td>';
                     }
                     else if(data == 'quantity')
                     {
@@ -1385,7 +1402,9 @@ function getResponsedata(rid = '') {
                     else if( data == 'product_form')
                     { }
                     else if( data == 'mill_name')
-                    {cdata += '<td > <input type="text" class="form-control" name="' + data + '[]" id="' + data + listspecdata['id'] + '" value="' + listspecdata[data] + '" placeholder="' + data.replace(/_/g, " ") + '" readonly></td>'; }
+                    {
+                        // cdata += '<td > <input type="text" class="form-control" name="' + data + '[]" id="' + data + listspecdata['id'] + '" value="' + listspecdata[data] + '" placeholder="' + data.replace(/_/g, " ") + '" readonly></td>'; 
+                    }
 
                     else if (data == 'product_form') {
                         cdata += '<td ><div class="field drop-select mt-3">  <select  class="form-control seleinput" id="' + data + listspecdata['id'] + '" name="' + data + '[]" '+req+'>  <option value="">Choose..</option> <option value="0" ';
@@ -1436,7 +1455,7 @@ function getResponsedata(rid = '') {
                     cdata += '<td > <input type="text" class="form-control " placeholder="Rate" id="rate' + listspecdata['id'] + '" name="rate[]"  > <input type="hidden" value="' + listspecdata['id'] + '" name="specification_id[]"></td>';
                 }
                 else {
-                    cdata += '  <td class="tst1"> <input type="test" class="form-control " value="' + listspecdata['creditrate'] + '" id="creditrate' + listspecdata['id'] + '" name="creditrate[]"   ></td>  <input type="hidden" value="' + listspecdata['id'] + '" name="specification_id[]"></td >';
+                    cdata += '  <td class="tst1 " > <input type="test" class="form-control " value="' + listspecdata['creditrate'] + '" id="creditrate' + listspecdata['id'] + '" name="creditrate[]"   ></td>  <input type="hidden" value="' + listspecdata['id'] + '" name="specification_id[]"></td >';
                     if (userType==3) {
                         cdata += '<td class="tst1"> <input type="test" class="form-control " placeholder="freight rate" id="freight_rate' + listspecdata['id'] + '" name="freight_rate[]"   > </td >'; 
                     }
@@ -2619,3 +2638,5 @@ $(document).on("submit", "#add_orderspecification_form", function(e) {
            processData: false
         });
   });
+
+

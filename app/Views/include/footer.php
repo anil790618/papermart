@@ -178,4 +178,9 @@ foreach ($javascript as $val)
         document.getElementById('indianDateTime').value = getCurrentIndianTime(); 
     
     </script>
+
+    
+<script> 
+$('.colspanresp').attr('colspan','0'); 
+</script>
 </html>

@@ -1931,7 +1931,7 @@ class ListController extends BaseController
         );
         $lid = $data["response"]["list_id"];
         $ab = $data["response"]["added_by"];
-        if ($this->userType != 4) {
+        if ($this->userType != 3) {
             $addedby = "and listed_products.added_by = '$this->memberID'";
             $add = "and added_by = $ab ";
             $radd="and rs.added_by = $ab";
@@ -1943,12 +1943,12 @@ class ListController extends BaseController
 
         $data["responsespecification"] = $this->main_model->getQueryAllData(
             "select *, (select product_category from product_category where product_category.id = response_specification.sub_category) as cname, (select product_name from product where product.id = response_specification.brand_name) as bname  from response_specification where        response_id = '$id' $add"  );
-
+          
 
         $data["listedproduct"] = $this->main_model->getQueryRowData(
             "select listed_products.* ,product_category.product_category as catname , product_category.product_specification as specification, product_category.id as pcatid, users.user_name as name, users.phone_number as pno from listed_products join users on listed_products.added_by = users.id  join product_category on listed_products.category = product_category.id where listed_products.deleted = 0 and listed_products.id  = '$lid' $addedby  order by listed_products.added_date desc"
         );
-       
+     
         // print_r( $data['listedproduct']);
 
         // $data['listedproduct'] = $this->main_model->getQueryRowData("select listed_products.* ,product_quality.product_quality as qname ,product_category.product_category as catname, product_category.product_specification as specification, product.product_category as pcatid, product.product_name as pname, users.user_name as name, users.phone_number as pno from listed_products join users on listed_products.added_by = users.id join product on listed_products.product_id = product.id left join product_quality on listed_products.quality_id = product_quality.id join product_category on product.product_category = product_category.id where listed_products.deleted = 0 and listed_products.id  = '$lid' and listed_products.added_by = '$this->memberID'   order by listed_products.added_date desc");
@@ -1972,7 +1972,7 @@ class ListController extends BaseController
         );
 
         $data["response"] = $this->main_model->getQueryRowData(
-            "select response.*, users.user_name,users.company_name, users.phone_number from response join users on response.interested_id = users.id where response.id = '$id' "
+            "select response.*, users.user_name,users.company_name, users.phone_number from response join users on response.interested_id = users.id where response.id='$id' "
         );
  
         // *****************************************************************************************************
@@ -1980,7 +1980,7 @@ class ListController extends BaseController
         $listid = $this->main_model->getRowData(
             "response",
             "interested_id",
-            "id = '$id'"
+            "id='$id'"
         );
         // $l_id=$listid['list_id'];
         $userid=$listid["interested_id"];
@@ -2439,6 +2439,7 @@ class ListController extends BaseController
     {
         $responseid = $this->request->getpost("responseid");
         $rsid = $this->request->getpost("rsid");
+        $totalcount = count($rsid);
         $crate = $this->request->getpost("crate");
         $rrate = $this->request->getpost("rrate")??0;
         $cqty = $this->request->getpost("cqty");
@@ -2446,7 +2447,7 @@ class ListController extends BaseController
         $data1["counterstatus"] = 3;
         $data1["response_counter_status"] = 2;
         $check1 = $this->main_model->update_table("response",$data1, "id='$responseid'" );
-        for ($i = 0; $i < count($rsid); $i++) {
+        for ($i = 0; $i < $totalcount; $i++) {
             $data["response_id"] = $responseid;
             $data["rspecific_id"] = $rsid[$i];
             $rrate = $rrate[$i];
@@ -2866,6 +2867,10 @@ class ListController extends BaseController
                     $return["specification"] =
                         $specification["product_specification"];
                 }
+                // $res_id= $data["response"]['id']??'';
+                $return["counter_status"] = $this->main_model->getQueryRowData(
+                    "select counterstatus from response where id = '$rid' "
+                );
                 $return['responseCounteroffer']=$this->main_model->getRowData('counter_offer', "*", "response_id = '$rid'");
             }
             echo json_encode($return, true);

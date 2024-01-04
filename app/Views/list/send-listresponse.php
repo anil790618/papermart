@@ -1,6 +1,12 @@
 
 					
-						
+<style>
+    .infobtn .bi{
+        font-size: 20px;
+    text-align: center;
+    display: block;
+} 
+</style>					
 <div class="container-fluid">
     <div class="card-header">
         <h4 class="card-title">Listed Product Information </h4>
@@ -185,133 +191,132 @@
                     </div>
                 </div>  
             </div>
-             <?php } else{
-                // print_r($listedproduct['subcategory']);
+             <?php } else{ 
                 if ($listedproduct['subcategory'] == 29 || $listedproduct['subcategory']==28) {
-?>
-<table id="wastepapertable" style="" ><tr> </tr><tr><th></th><th>ON-Report</th><th>NON-Report</th></tr>
-    
-    <?php
-if ($listspecification_waste['sub_category']==28) {
-   ?>
-   
-    <tr>
-            <th>Scan</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_scan_on']??''?>" name="w_scan_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_scan_non']??''?>" name="w_scan_non"></td>
-        </tr>
-        <tr>
-            <th>Colour</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_color_on']??''?>" name="w_color_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_color_non']??''?>" name="w_color_non"></td>
-        </tr>
-        <tr>
-            <th>Copy</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_copy_on']??''?>" name="w_copy_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_copy_non']??''?>" name="w_copy_non"></td>
-        </tr>
-        <tr>
-            <th>Record</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_record_on']??''?>" name="w_record_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_record_non']??''?>" name="w_record_non"></td>
-        </tr>
-        <tr>
-            <th>Shorted Book</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_short_on']??''?>" name="w_short_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_short_non']??''?>" name="w_short_non"></td>
-        </tr>
-        <tr>
-            <th>White Cutting 1st Brightness 80% plus</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_whitecutting_on']??''?>" name="w_whitecutting_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_whitecutting_non']??''?>" name="w_whitecutting_non"></td>
-        </tr>
-        <tr>
-            <th>White Pepsi</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_pepsi_on']??''?>" name="w_pepsi_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_pepsi_non']??''?>" name="w_pepsi_non"></td>
-        </tr>
-        <tr>
-            <th>White Board</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_board_on']??''?>" name="w_board_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_board_non']??''?>" name="w_board_non"></td>
-        </tr>
-        <tr>
-            <th>Old Book</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_book_on']??''?>" name="w_book_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_book_non']??''?>" name="w_book_non"></td>
-        </tr>
-        <tr>
-            <th>Rulled Cutting</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_rulled_on']??''?>" name="w_rulled_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_rulled_non']??''?>" name="w_rulled_non"></td>
-        </tr>
-        <tr>
-            <th>Tick Mark Pepsi</th>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_tick_on']??''?>" name="w_tick_on"></td>
-            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_tick_non']??''?>" name="w_tick_non"></td>
-        </tr>
-        <!-- <tr>
-            <th></th>
-            <td><input type="datetime-local" class="tableinput"  disabled readonly   name="valid from"></td>
-            <td><button type="submit" class="btn btn-primary"  disabled readonly >Change Price</button></td>
-        </tr>
-    </table> -->
-   <?php
-}
+                ?>
+                <table id="wastepapertable" style="" ><tr> </tr><tr><th></th><th>ON-Report</th><th>NON-Report</th></tr>
+                    
+                    <?php
+                if ($listspecification_waste['sub_category']==28) {
+                ?>
+                
+                    <tr>
+                            <th>Scan</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_scan_on']??''?>" name="w_scan_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_scan_non']??''?>" name="w_scan_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Colour</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_color_on']??''?>" name="w_color_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_color_non']??''?>" name="w_color_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Copy</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_copy_on']??''?>" name="w_copy_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_copy_non']??''?>" name="w_copy_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Record</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_record_on']??''?>" name="w_record_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_record_non']??''?>" name="w_record_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Shorted Book</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_short_on']??''?>" name="w_short_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_short_non']??''?>" name="w_short_non"></td>
+                        </tr>
+                        <tr>
+                            <th>White Cutting 1st Brightness 80% plus</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_whitecutting_on']??''?>" name="w_whitecutting_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_whitecutting_non']??''?>" name="w_whitecutting_non"></td>
+                        </tr>
+                        <tr>
+                            <th>White Pepsi</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_pepsi_on']??''?>" name="w_pepsi_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_pepsi_non']??''?>" name="w_pepsi_non"></td>
+                        </tr>
+                        <tr>
+                            <th>White Board</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_board_on']??''?>" name="w_board_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_board_non']??''?>" name="w_board_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Old Book</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_book_on']??''?>" name="w_book_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_book_non']??''?>" name="w_book_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Rulled Cutting</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_rulled_on']??''?>" name="w_rulled_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_rulled_non']??''?>" name="w_rulled_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Tick Mark Pepsi</th>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_tick_on']??''?>" name="w_tick_on"></td>
+                            <td><input type="text" class="tableinput" disabled readonly value="<?=$listspecification_waste['w_tick_non']??''?>" name="w_tick_non"></td>
+                        </tr>
+                        <!-- <tr>
+                            <th></th>
+                            <td><input type="datetime-local" class="tableinput"  disabled readonly   name="valid from"></td>
+                            <td><button type="submit" class="btn btn-primary"  disabled readonly >Change Price</button></td>
+                        </tr>
+                    </table> -->
+                <?php
+                }
 
-?>
-    <?php
-if ($listspecification_waste['sub_category']==29) {
-   ?>
-    
-    <!-- <form method="post" id="update_wastpaper_price">
-    <input type="hidden" class="tableinput"  disabled readonly value="<?=$listspecification_waste['id']??''?>" name="id">
-   <table id="wastepapertable" style="" ><tr> </tr><tr><th></th><th>ON-Report</th><th>NON-Report</th></tr> -->
-   <tr>
-            <th>Corrugation Ist</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr1_on']??''?>" name="k_corr1_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr1_non']??''?>" name="k_corr1_non"></td>
-        </tr>
-        <tr>
-            <th>Corrugation IInd</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr2_on']??''?>" name="k_corr2_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr2_non']??''?>" name="k_corr2_non"></td>
-        </tr>
-        <tr>
-            <th>Dye Cutting</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_dye_on']??''?>" name="k_dye_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_dye_non']??''?>" name="k_dye_non"></td>
-        </tr>
-        <tr>
-            <th>Grey Board</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_grey_on']??''?>" name="k_grey_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_grey_non']??''?>" name="k_grey_non"></td>
-        </tr>
-        <tr>
-            <th>Duplex</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_duplex_on']??''?>" name="k_duplex_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_duplex_non']??''?>" name="k_duplex_non"></td>
-        </tr>
-        <tr>
-            <th>Mill Board</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_mill_on']??''?>" name="k_mill_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_mill_non']??''?>" name="k_mill_non"></td>
-        </tr>
-        <tr>
-            <th>Core Pipe</th>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_core_on']??''?>" name="k_core_on"></td>
-            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_core_non']??''?>" name="k_core_non"></td>
-        </tr>
-       
-        <?php
-}
+                ?>
+                    <?php
+                if ($listspecification_waste['sub_category']==29) {
+                ?>
+                    
+                    <!-- <form method="post" id="update_wastpaper_price">
+                    <input type="hidden" class="tableinput"  disabled readonly value="<?=$listspecification_waste['id']??''?>" name="id">
+                <table id="wastepapertable" style="" ><tr> </tr><tr><th></th><th>ON-Report</th><th>NON-Report</th></tr> -->
+                <tr>
+                            <th>Corrugation Ist</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr1_on']??''?>" name="k_corr1_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr1_non']??''?>" name="k_corr1_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Corrugation IInd</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr2_on']??''?>" name="k_corr2_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_corr2_non']??''?>" name="k_corr2_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Dye Cutting</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_dye_on']??''?>" name="k_dye_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_dye_non']??''?>" name="k_dye_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Grey Board</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_grey_on']??''?>" name="k_grey_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_grey_non']??''?>" name="k_grey_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Duplex</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_duplex_on']??''?>" name="k_duplex_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_duplex_non']??''?>" name="k_duplex_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Mill Board</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_mill_on']??''?>" name="k_mill_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_mill_non']??''?>" name="k_mill_non"></td>
+                        </tr>
+                        <tr>
+                            <th>Core Pipe</th>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_core_on']??''?>" name="k_core_on"></td>
+                            <td><input type="text" class="tableinput"  disabled readonly value="<?=$listspecification_waste['k_core_non']??''?>" name="k_core_non"></td>
+                        </tr>
+                    
+                        <?php
+                }
 
-?>
+                ?>
 
- 
- 
-</table>
-<?php
+                
+                
+                </table>
+                <?php
 
                 }else{ 
                     if ($listedproduct['added_by']!=3) {
@@ -412,34 +417,7 @@ if ($listspecification_waste['sub_category']==29) {
                                         // 
                                
                                    }
-                                } 
-                                if ($counter_status) {
-                                    $cstatus= $counter_status['response_counter_status'];
-                                    $concstatus= $counter_status['confirm_counter_status'];
-                                 if (1) {
-                                     ?>
-                                    
-                                    <?php
-                                    if (1) {
-                                        // echo"<span class='badge light badge-success badge-text-size'>Counter Accepted</span>";
-                                        ?>
-                                        
-                                        <!-- <a class="confirmSaleResponse"   href="javascript:void(0)" tag="<?=$response['id']??0;?>" title=" Confirm Response "><span class="badge light badge-success badge-text-size fs-14"><i class="fa fa-check"></i></span></a> -->
-                                        <?php
-                                    }else{
-                                        ?>
-                                        <!-- <a class=""   href="javascript:void(0)" onclick="alert('Counter Pending from buyer side')" title=" Confirm Response "><span class="badge light badge-success badge-text-size fs-14"><i class="fa fa-check"></i></span></a> -->
-                                        <?php
-                                    }
-                                 }else{?>
-                                    <!-- <a class="confirmSaleResponse"   href="javascript:void(0)" tag="<?=$response['id']??0;?>" title=" Confirm Response "><span class="badge light badge-success badge-text-size fs-14"><i class="fa fa-check"></i></span></a> -->
-                              <?php  }
-                                }
-                                ?>
-                                <!-- <a class="confirmSaleResponse"   href="javascript:void(0)" tag="<?=$response['id']??0;?>" title=" Confirm Response "><span class="badge light badge-success badge-text-size fs-14"><i class="fa fa-check"></i></span></a> -->
-                                
-                                <!-- <a class="disapproveList" href="javascript:void(0)" tag="<?=$response['id'];?>" ><span class="badge light badge-danger badge-text-size"  title=" Reject Response "><i class="fa fa-times"></i></span></a> -->
-                                <?php
+                                }  
                             }
                            
                             ?>
@@ -505,11 +483,9 @@ if ($listspecification_waste['sub_category']==29) {
                     <div class="tabel-body-div">
                         <div class="table-responsive ">
                             <div id="table">
-                                <table id="producttype_tbale" class="table  fs-13">
+                                <table id="producttype_tbale" class="table  fs-13 table-bordered">
                                     <tr>
-                                        <th></th>
-                                        <th>S.No.  </th>
-                                        
+                                        <th></th> 
                                         <?php
                                         $string = $listedproduct['specification'] ;
                                         $string = preg_replace('/\.$/', '', $string); //Remove dot at end if exists
@@ -521,26 +497,39 @@ if ($listspecification_waste['sub_category']==29) {
                                         $arrayRequired = explode(',', $stringReq);  
                                         foreach($array as $value) //loop over values
                                         {
-                                           
+                                        //    print_r($value);
                                             $rq="";
-                                            if($value=='quantity_type'){
-                                                $rq="";
-                                                $cls="d-none";
-                                             }
-                                            if(in_array($value, $arrayRequired)){
-                                                    $rq="<span class='text-danger'>*</span>";
-                                                    $cls="quantityclass";
-                                            }
-                                           
-                                            // if($value == 'quantity_uom'){ echo '<th>f</th>';}
-                                            if($value == 'rate'){ }
-                                            if($value == 'product_form'){ }
-                                            if($value == 'size_uom') { echo '<th></th>'; }
-                                           
-                                            
-                                            elseif ($value=='quantity_uom' ||  $value=='min_quantity_uom') {
-                                                echo '';
-                                            }
+                                            if($value=='quantity_type'){  echo''; }
+                                            // elseif(in_array($value, $arrayRequired)){
+                                            //         $rq="<span class='text-danger'>*</span>";
+                                            //         $cls="quantityclass";
+                                            // }
+                                            elseif($value == 'rate'){ echo '<th>Cash <br> Rate</th>';  } 
+                                            elseif($value == 'product_form'){ }
+                                            elseif($value == 'mill_name'){ }
+                                            elseif($value == 'size_uom') { echo ''; } 
+                                             elseif ($value=='quantity_uom') { echo ''; }
+                                             elseif ($value=='min_quantity_uom') { echo ''; }
+                                            elseif($value=='sub_category'){echo  '<th  class="labeltext text-center">'.str_replace("_","<br> ",$value).'</th>';} 
+                                            elseif($value=='brand_name'){echo  '<th  class="labeltext text-center">'.str_replace("_","<br> ",$value).'</th>';} 
+                                            elseif($value=='min_quantity_per_gsm'){ 
+                                                $string = str_replace("_"," ",$value); 
+                                                $firstSpacePos = strpos($string, ' '); 
+                                                $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                                $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                                echo  '<th style="vertical-align:middle"  class="labeltext text-center">'.$modifiedString.'</th>';} 
+                                            elseif($value=='min_quantity_pertruck'){ 
+                                                $string = str_replace("_"," ",$value); 
+                                                $firstSpacePos = strpos($string, ' '); 
+                                                $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                                $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                                echo  '<th  style="vertical-align:middle" class="labeltext text-center">'.$modifiedString.'</th>';} 
+                                            elseif($value=='packing_per_ream'){ 
+                                                $string = str_replace("_"," ",$value); 
+                                                $firstSpacePos = strpos($string, ' '); 
+                                                $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                                $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                                echo  '<th style="vertical-align:middle"  class="labeltext text-center">'.$modifiedString.'</th>';}  
                                             else{
                                                   echo '<th  class="labeltext  ">'.str_replace("_"," ",$value). $rq.'</th>'; 
                                                  }
@@ -550,23 +539,24 @@ if ($listspecification_waste['sub_category']==29) {
                                         <!-- <th> Rate offer </th> -->
                                           <!-- <th></th> -->
                                           <!-- <th> Cash Rate </th> -->
-                                           <th>Credit Rate </th>
+                                           <th>Credit <br> Rate </th>
+                                           <!-- <th></th> -->
                                            
                                            <?php
                                                 if ($user_type==3) {
-                                                echo "<th>freight perkg </th>";
+                                                echo "<th style='text-align:center'>freight <br> perkg </th>";
                                                 }
                                            ?>
                                         <?php
                                         if($response){
                                             if($response['counterstatus'] != 0 ){
-                                                echo '<th>Counter Qty </th>
-                                                        <th>Counter Rate </th>
+                                                echo '<th style="text-align:center">Counter<br> Qty </th>
+                                                        <th style="text-align:center">Counter <br> Rate </th>
                                                        ';
                                             }
                                             if($response['counterstatus'] == 1 ){
-                                                echo '<th>Final Qty </th>
-                                                         <th>Final Rate </th>';
+                                                echo '<th style="text-align:center">Final <br> Qty </th>
+                                                         <th style="text-align:center">Final <br> Rate </th>';
                                             }
                                         } 
                                         ?>
@@ -590,30 +580,41 @@ if ($listspecification_waste['sub_category']==29) {
                                                 <?php
                                                 } else {
                                                     ?>
-                                                <td><input type="checkbox" class="checked_item" value="<?=$value['id']?>" tag="<?=$value['id']?>" name="checked[]"></td>
+                                                <td class="d-flex align-items-center justify-content-evenly" ><input type="checkbox" onclick="return false"  checked class="checked_item" value="<?=$value['id']?>" tag="<?=$value['id']?>" name="checked[]">
+                                                <a tabindex="0" class="infobtn mx-2" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Discription" data-bs-content="<?=$listedproduct['description']?>"> <i class="bi bi-info-circle"></i></a></td>
                                                     <?php
                                                 }
 
                                            ?>
+                                               
                                                 
-                                                <!-- <td><input type="checkbox" class="checked_item" value="<?=$value['id']?>" tag="<?=$value['id']?>" name="checked[]"></td> -->
-                                                <td><?= $i; ?> </td> 
+                                                
+                                                    <!-- <div class="" title='Click To View Description'>
+                                                <span class=" infobtn ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info" viewBox="0 0 16 16">
+                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                </svg>
+                                                </span>
+                                                <ul class="infoDropdown" style="z-index:1100">
+                                                    <li class="p-3"><p><b>Description: </b></p> <span  ><?=$listedproduct['description']?></span></li> 
+                                                </ul>
+                                                </div> -->
+                                           
 
                                               <?php 
                                             foreach($array as $data) //loop over values
-                                            {
-
-                                                // print_r($data);
+                                            { 
                                                 if($data == 'quantity_type'){
-                                                     if($value[$data]==1){ echo '<td>Godown</td>'; } 
-                                                    else if($value[$data]==2) { echo '<td>Truck Load</td>';}
-                                                        else if($value[$data]==3) { echo '<td>Part Truck Load</td>';}
-                                                        else{ echo '<td>NA</td>';}
+                                                    //  if($value[$data]==1){ echo '<td>Godown</td>'; } 
+                                                    // else if($value[$data]==2) { echo '<td>Truck Load</td>';}
+                                                    //     else if($value[$data]==3) { echo '<td>Part Truck Load</td>';}
+                                                    //     else{ echo '<td>NA</td>';}
+                                                    echo'';
                                                     }
                                                 else if( $data == 'product_form' ){ if($value[$data]==1){ echo '<td>Compressed</td>'; } else { echo '<td>Loose</td>';} }
 
                                                  else if( $data == 'brand_name' ){ echo '<td>'.$value['bname'].'</td>'; } 
-                                                
+                                                 else if( $data == 'mill_name' ){ echo ''; }  
                                                 else if( $data == 'sub_category' ){ echo '<td>'.$value['cname'].'</td>'; }
                                                 else if( $data=='quantity_uom' ||  $data=='min_quantity_uom' ){ echo ''; }
 
@@ -650,7 +651,10 @@ if ($listspecification_waste['sub_category']==29) {
                                                 
                                                 } 
                                                 else if( $data == 'rate' ){  } 
-
+                                                else if( $data == 'size_uom' ){} 
+                                                else if( $data == 'size' ){
+                                                    echo '<td>'.$value[$data].'</td>';
+                                                } 
                                                 else{ echo '<td>'.$value[$data].'</td>';}
                                             }
                                             $pr='';
@@ -672,27 +676,23 @@ if ($listspecification_waste['sub_category']==29) {
                                              if($listedproduct['delivery_locations']==14){
                                              $pr=2000;
                                              } 
-                                            }?>
-                                            <!-- <td></td> -->
-                                            <!-- <td><?=$value['rate']?></td>  -->
+                                            }?> 
+                                            <!-- <td><?=$value['rate']?></td> papermart04-01-2024.zip -->
                                             <td><?=$value['cashrate']?></td> 
-                                            <td><?=$value['creditrate']?></td> 
-                                            <!-- <td style='text-warp:normal;width:100px'></td>  -->
+                                            <td><?=$value['creditrate']?></td>  
+                                           
                                             <td style="display:none"><?=$pr?></td>
                                              <?php if($responsespecification != ''){
                                                 if($responsespecification['crate'] != ''){
-                                                    echo '<td></td><td></td>';
+                                                    echo '';
                                                 }
-                                             }
-                                            //  print_r($listedproduct);
-                                            ?> 
-
-                                            
+                                             } 
+                                            ?>  
                                         </tr>
-                                        <tr><td></td> <td></td><th>Description : </th><td colspan='8'><?=$listedproduct['description']?></td></tr>
+                                        <!-- <tr><td></td> <td></td><th>Description : </th><td colspan='8'><?=$listedproduct['description']?></td></tr> -->
 
                                             <tr class="resinput<?=$value['id']?> " tag="<?=$value['id']?>"  style="display:contents">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                                 <?php if($responsespecification != ''){
                                                     ?>
                                                      <td class="text-primary font-weight-bold">Response</td>
@@ -702,24 +702,23 @@ if ($listspecification_waste['sub_category']==29) {
                                             {
                                                 
                                                 if($data == 'quantity_type'){ 
-                                                    if($responsespecification[$data]==1){ echo '<td class="dd6">Godown</td>'; } 
-                                                else if($responsespecification[$data]==2) { echo '<td class="dd6">Truck Load</td>';}
-                                                else if($responsespecification[$data]==3) { echo '<td class="dd6">Part Truck Load</td>';}
-                                                else{ echo '<td class="dd6">NA</td>';}
+                                                //     if($responsespecification[$data]==1){ echo '<td class="dd6">Godown</td>'; } 
+                                                // else if($responsespecification[$data]==2) { echo '<td class="dd6">Truck Load</td>';}
+                                                // else if($responsespecification[$data]==3) { echo '<td class="dd6">Part Truck Load</td>';}
+                                                // else{ echo '<td class="dd6">NA</td>';}
+                                                echo'';
                                                 }
                                                 else if( $data == 'product_form' ){ if($responsespecification[$data]==1){ echo '<td class="dd4">Compressed</td>'; } else { echo '<td class="dd5">Loose</td>';} }
 
                                                  else if( $data == 'brand_name' ){ echo '<td class="dd3">'.$responsespecification['bname'].'</td>'; } 
                                                 
                                                 else if( $data == 'sub_category' ){ echo '<td class="dd2">'.$responsespecification['cname'].'</td>'; }
+                                                else if( $data == 'mill_name' ){ echo ''; }
+                                                else if( $data == 'size_uom' ){ echo ''; }
 
                                                 else if( $data == 'quantity' ){ echo '<td class="dd2">'.$responsespecification['quantity'].'</td>'; }
                                                 else if( $data == 'quantity_uom' ){ echo ''; }
-                                                else if( $data == 'min_quantity_uom' ){ echo ''; }
-//  /if(in_array($value, $arrayRequired)){
-                                                // else if( $data == 'rate' ){  }
-                                                // else if( $data == 'product_form' ){  }
-
+                                                else if( $data == 'min_quantity_uom' ){ echo ''; } 
                                                 else{ echo '<td class="dd">'.$responsespecification[$data].'</td>';}
                                             } 
                                             //  echo '<td class="dd0">'.$responsespecification['rate_uom'].'</td>';freight_rate  <td class="dd">'.$responsespecification['cashrate'].'</td>
@@ -731,7 +730,7 @@ if ($listspecification_waste['sub_category']==29) {
 
                                                if($responsespecification['cqty']){ echo '<td class="dd">'.$responsespecification['cqty']. '</td>' ; } 
                                                if($responsespecification['crate']){ echo '<td class="dd">'.$responsespecification['crate']. '</td>' ; } 
-                                             
+                                            
                                                if($response){
                                                    if($response['counterstatus'] == 1 ){
                                                     if($responsespecification['fquantity']){ echo '<td class="dd">'.$responsespecification['fquantity']. '</td>' ; } 
@@ -761,6 +760,7 @@ if ($listspecification_waste['sub_category']==29) {
                                         </tr>
                                     <?php
                                     } ?>
+                                    
                                 </table>
                             </div>
                         </div>
@@ -1005,25 +1005,7 @@ if ($listedproduct['added_by']==3) {
             </div>
         </div>
     </div>
-</div>  
-
-<!-- <div class="modal fade " id="counterofferModal" tabindex="-1" aria-labelledby="counterofferModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="card-title"> Post Counter Offer </h4>
-            </div>
-            <form method="post" id="add_counteroffer_form" >
-                <input type="hidden" name="responseid" id="responseid" class="form-control">
-                <div class="modal-body counterdata"></div>
-                <div class="modal-footer counterfooter">
-                    <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>	 -->
+</div>   
 
 <div class="modal fade " id="counterofferModal" tabindex="-1" aria-labelledby="counterofferModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -1042,3 +1024,14 @@ if ($listedproduct['added_by']==3) {
         </div>
     </div>
 </div>	
+
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+//       $('.infobtn').click(function(){ 
+//       $('.infobtn').closest('.infoDropdown').toggle()
+//   })
+  const popover = new bootstrap.Popover('.popover-dismiss', {
+  trigger: 'focus'
+})
+</script>

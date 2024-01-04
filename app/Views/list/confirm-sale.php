@@ -23,13 +23,7 @@
             <input type="hidden" name="list_id" value=<?=$response['list_id']?> >
             <input type="hidden" name="response_id" value=<?=$response['id']?> >
             <input type="hidden" name="deckle" value=<?=$listedproduct['deckle']??1?> >
-            <?php
-// if ($user_type ==4 || $user_type==5) {
-//     $vl=$listedproduct['added_by'];
-// }else{
-//     $vl = $response['interested_id'];
-// }
-?>
+            
             <input type="hidden" name="accepted_id" value=<?=$response['interested_id']?> >
           <?php 
                 if($ordercount)
@@ -50,9 +44,7 @@
                     <label># Sale</label><span class="text-danger">*</span>
                     <input type="text" class="form-control" name="order_number" id="order_number" placeholder="Product Name" value="<?= $total_order?>" readonly>
                     
-                </div>
-                 <!--  -->
-              
+                </div> 
                    <input  type="hidden" class="datepicker-default form-control" id="datepicker" name="order_date" value="<?=date("d") ."  " . date("F") .", ". date("Y");?>"   >
               
                 
@@ -136,29 +128,53 @@
     <div class="card mb-2 product1">
         
         <div class="card-body size-4" style="overflow-x:auto">
-                        <table id="producttype_tbale" class="table table-responsive-md tabledata size-6">
-                <thead>
+                        <table id="producttype_tbale" class="table table-responsive-md tabledata size-6  table-bordered">
+                <thead> 
                     <tr>
                          <?php
                             $string = $listedproduct['specification']??'' ;
                             $string = preg_replace('/\.$/', '', $string); //Remove dot at end if exists
                             $array = explode(',', $string); //split string into array seperated by ', '
+                            
                             foreach($array as $value) //loop over values
                             {
                                 if($value == 'rate' ){ }
                                 else if( $value == 'quantity'){ }
+                                else if( $value == 'quantity_type'){ }
+                                else if( $value == 'mill_name'){ }
+                                else if( $value == 'size_uom'){ }
+                                elseif($value=='quantity_uom'){echo'';}
+                                elseif($value=='min_quantity_uom'){echo'';} 
+                                elseif($value=='sub_category'){echo  '<th  class="labeltext text-center">'.str_replace("_","<br> ",$value).'</th>';} 
+                                elseif($value=='min_quantity_per_gsm'){ 
+                                    $string = str_replace("_"," ",$value); 
+                                    $firstSpacePos = strpos($string, ' '); 
+                                    $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                    $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                    echo  '<th style="vertical-align:middle"  class="labeltext text-center">'.$modifiedString.'</th>';} 
+                                elseif($value=='min_quantity_pertruck'){ 
+                                    $string = str_replace("_"," ",$value); 
+                                    $firstSpacePos = strpos($string, ' '); 
+                                    $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                    $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                    echo  '<th  style="vertical-align:middle" class="labeltext text-center">'.$modifiedString.'</th>';} 
+                                elseif($value=='packing_per_ream'){ 
+                                    $string = str_replace("_"," ",$value); 
+                                    $firstSpacePos = strpos($string, ' '); 
+                                    $secondSpacePos = strpos($string, ' ', $firstSpacePos + 1); 
+                                    $modifiedString = substr_replace($string, '<br>', $secondSpacePos, 1); 
+                                                            echo  '<th style="vertical-align:middle"  class="labeltext text-center">'.$modifiedString.'</th>';} 
+                                                       
                                 else    { echo '<th  class="labeltext">'.str_replace("_"," ",$value).'</th>'; }
 
                                 
                             }?>
-                        <th>Quantity</th>
-                        <th>Rate</th>
-                        <th>Product Price</th>
-                        <th>Tax </th>
-                        <!-- <th>Discount </th> -->
-                        <th>Insurance Cost</th>
-                        <th>Est. Amount</th>
-                        <th></th>
+                        <th style='vertical-align:center'>Quantity</th>
+                        <th style='vertical-align:center'>Rate</th>
+                        <th style='vertical-align:center'>Product <br> Price</th>
+                        <th style='vertical-align:center'>Tax </th> 
+                        <th style='vertical-align:center'>Insurance <br> Cost</th>
+                        <th style='vertical-align:center'>Est. Amount</th> 
                     </tr>
                 </thead>
                
@@ -169,23 +185,30 @@
                                 $i = 1;
                                 
                                 foreach ($responsespecification as $value) {
+                                    // print_r($listspecification);
                             ?>
                                     <tr class="product<?=$i?>">
                                         <input type="hidden" name="specificationid[]" value="<?=$value['id']?>">
                                       <?php 
-                                    //   print_r($array);
+                                    
                                     foreach($array as $data) //loop over values
                                     {
-                                        if($data == 'quantity_type'){ if($value[$data]==1){ echo '<td>Godown</td>'; } 
-                                                    else if($value[$data]==2) { echo '<td>Truck Load</td>';}
-                                                     else if($value[$data]==3) { echo '<td>Part Truck Load</td>';}
-                                                     else{ echo '<td>NA</td>';}}
-                                        else if( $data == 'product_form' ){ if($value[$data]==1){ echo '<td>Compressed</td>'; } else { echo '<td>Loose</td>';} }
-                                         else if( $data == 'sub_category'){  echo '<td>'.$value['cname'].'</td>'; }
-                                        else if( $data == 'quantity'){ ?>   <?php }
-                                        else if( $data == 'rate'){ ?>  <?php }
+                                        if($data == 'quantity_type'){
+                                             if($value[$data]==1){ echo '<td>Godown</td>'; } 
+                                                    // else if($value[$data]==2) { echo '<td>Truck Load</td>';}
+                                                    //  else if($value[$data]==3) { echo '<td>Part Truck Load</td>';}
+                                                    //  else{ echo '<td>NA</td>';}
+                                                    }
+                                        elseif( $data == 'product_form' ){ if($value[$data]==1){ echo '<td>Compressed</td>'; } else { echo '<td>Loose</td>';} }
+                                         elseif( $data == 'sub_category'){  echo '<td>'.$value['cname'].'</td>'; }
+                                        elseif( $data == 'quantity'){}
+                                        elseif( $data == 'rate'){  }
+                                        elseif( $data == 'mill_name'){  }
+                                        elseif( $data == 'size_uom'){  }
+                                        elseif($data=='quantity_uom'){echo'';}
+                                        elseif($data=='min_quantity_uom'){echo'';} 
                                         else{
-                                             echo '<td></td>';
+                                            echo '<td>'.$value[$data].'</td>';
                                             }
                                     }?>
                         <td>
@@ -200,29 +223,10 @@
                             <input type="text" style="height:36px" class=" form-control price" name="price[]" tag="<?=$i?>"   value="<?=$value['frate']*$value['fquantity']?>" readonly>
                             <span class="text-danger size-7 e_price1"></span>
                         </td>
-                        <?php 
-                                // print_r($listedproduct['product_location']); 
-                                // print_r($listedproduct['delivery_locations']);
-                                $price=$value['frate']*$value['fquantity'];
-                                $p_location = $listedproduct['product_location']??'';
-                                $d_location =$listedproduct['delivery_locations']??'';
-                                // if($p_location==1 || $p_location==2){
-                                //     if($d_location==1){
-                                //         $s_tax = ($price*12)/100; 
-                                //         $t_title = "IGST";
-                                //     }else{
-                                //         $s_tax=($price*12)/100;
-                                //         $t_title = "CGST and SGST";
-                                //     }
-                                // }  
-                        ?>
+                       
                         <td>
                             <input type="text" style="height:36px;width:100px" class=" form-control tax" title="" name="tax[]" tag="<?=$i?>"  value="0" required>
-                            <!-- <select class="form-select tax" name="tax[]" tag="<?=$i?>" required>
-                            <option value='0'>Tax</option>
-                            <option value="12">IGST</option>
-                            <option value="12">SGST & CGST</option> 
-                            </select> -->
+                           
                             <span class="text-danger size-7 e_tax1"></span>
                         </td>
                      
@@ -235,21 +239,21 @@
                             <input type="text" style="height:36px" class=" form-control total_price" name="total_price[]" tag="<?=$i?>"  value="<?=$value['frate']*$value['fquantity']?>"  readonly>
                             <span class="text-danger size-7 e_total_price1"></span>
                         </td>
-                        <td></td>   <td>
+                        <td>
                             <input type="text" style="display:none" class="form-control discount" name="discount[]" tag="<?=$i?>" min=0 max=100  value="0" >
                             <span class="text-danger size-7 e_discount1"></span>
                         </td>
-                                                        </tr>
-                                                    <?php
-                                                        $i++;
-                                                    }
-                                                } else {
-                                                    ?>
-                                                    <tr>
-                                                        <td colspan="10">No Data</td>
-                                                    </tr>
-                                                <?php
-                                                } ?>
+                            </tr>
+                        <?php
+                            $i++;
+                        }
+                    } else {
+                        ?>
+                        <tr>
+                            <td colspan="10">No Data</td>
+                        </tr>
+                    <?php
+                    } ?>
                    
                 </tbody>
             </table>

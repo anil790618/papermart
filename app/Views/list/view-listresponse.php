@@ -10,20 +10,7 @@
   text-align: center;
   line-height: 8rem;
 }
-</style>
-<script>
- 
-    // $(document).ready(function  (){
-    //     const fullName = document.getElementById('fullName').textContent;
-    //     const intials = fullName.split(' ').map(name => name[0]).join('').toUpperCase();
-    //     document.getElementById('profileImage').innerHTML = intials;
-    // });
-   
-</script>
-					
-						<?php
-// print_r($listedproduct);
-                        ?>
+</style>  
 <div class="container-fluid">
     <div class="card-header">
         <h4 class="card-title ">Listed Product Information</h4>
@@ -31,34 +18,24 @@
             <ul class="nav nav_filter ">
                 <li class="nav-item text-end">
                       <a class=" mb-2 mr-2 sendListResponse" href="javascript:void(0)" title='response' addby="<?=$listedproduct['added_by']?>"  subcat="<?=$listspecification_waste['sub_category']??''?>" tag="<?=$listedproduct['id']?>"><span class="badge light badge-info badge-text-size"><i class="fa fa-send"></i> Send Response</span></a>
-                   <!-- <a href="javascript:void(0)" class="btn btn-primary mb-2 addCart mr-2" tag="<?=$listedproduct['id']?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a> -->
-                 
                 </li>
                 <li class="nav-item text-end">
-                   <a href="javascript:void(0)" class="btn btn-primary mb-2 nav-userlist" >Back</a>
-                  
+                   <a href="javascript:void(0)" class="btn btn-primary mb-2 nav-userlist" >Back</a> 
                 </li>
             </ul>
         </div>
     </div>	
     <div class="row" >
             <div class=" col-lg-12">
-                        <div class="card ">
-                          
+                        <div class="card "> 
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-12 "><h5 class="card-title text-primary">Listing Details</h5></div>
-                                    <!-- <?php
-                                        if ($listedproduct['added_by']==3) {
-                                            ?> -->
+                                    <div class="col-12 "><h5 class="card-title text-primary">Listing Details</h5></div> 
                                             <div class="col-4">
                                                 <span class="list-fea"> 
                                                     <span class="feahead"> Mill Name</span> :<?=$user['company_name']?>
                                                 </span>
-                                            </div>
-                                            <!-- <?php
-                                        }
-                                    ?> -->
+                                            </div> 
                                     <div class="col-4">
                                         <span class="list-fea"> 
                                             <span class="feahead">Category Name</span> :<?=$listedproduct['catname']?>
