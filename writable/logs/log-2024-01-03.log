@@ -1,0 +1,114 @@
+ERROR - 2024-01-03 14:53:42 --> mysqli_sql_exception: Column 'truck_ratio' cannot be null in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `wa...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wa...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wa...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wa...', Array, false)
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(8): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(793): App\Models\Main_model->insert_table('wastpaper_quali...', Array)
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->submitList()
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#8 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-03 15:48:46 --> mysqli_sql_exception: Column 'truck_ratio' cannot be null in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `wa...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wa...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wa...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wa...', Array, false)
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(8): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(793): App\Models\Main_model->insert_table('wastpaper_quali...', Array)
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->submitList()
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#8 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-03 16:12:11 --> mysqli_sql_exception: Operand should contain 1 column(s) in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `wa...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wa...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wa...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wa...', Array, false)
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(8): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(793): App\Models\Main_model->insert_table('wastpaper_quali...', Array)
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->submitList()
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#8 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-03 16:39:31 --> Array to string conversion
+in APPPATH\Views\list\userlist.php on line 52.
+ 1 APPPATH\Views\list\userlist.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\list\\userlist.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\userlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/userlist', [], true)
+ 5 APPPATH\Controllers\ListController.php(2402): view('list/userlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 16:41:25 --> Array to string conversion
+in APPPATH\Views\list\userlist.php on line 52.
+ 1 APPPATH\Views\list\userlist.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\list\\userlist.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\userlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/userlist', [], true)
+ 5 APPPATH\Controllers\ListController.php(2402): view('list/userlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 16:41:34 --> Array to string conversion
+in APPPATH\Views\list\userlist.php on line 52.
+ 1 APPPATH\Views\list\userlist.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\list\\userlist.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\userlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/userlist', [], true)
+ 5 APPPATH\Controllers\ListController.php(2402): view('list/userlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 16:42:53 --> Array to string conversion
+in APPPATH\Views\list\userlist.php on line 52.
+ 1 APPPATH\Views\list\userlist.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\list\\userlist.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\userlist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/userlist', [], true)
+ 5 APPPATH\Controllers\ListController.php(2402): view('list/userlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 16:44:34 --> syntax error, unexpected single-quoted string "", expecting "," or ";"
+in APPPATH\Views\list\userlist.php on line 124.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/userlist', [], true)
+ 3 APPPATH\Controllers\ListController.php(2402): view('list/userlist', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 17:13:49 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\list\view-listproduct.php on line 130.
+ 1 APPPATH\Views\list\view-listproduct.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\list\\view-listproduct.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\view-listproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/view-listproduct', [], true)
+ 5 APPPATH\Controllers\ListController.php(1242): view('list/view-listproduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getViewListProduct('271')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 17:46:07 --> Undefined variable $min_quantity<br>per_gsm
+in APPPATH\Views\list\view-listproduct.php on line 145.
+ 1 APPPATH\Views\list\view-listproduct.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $min_quantity<br>per_gsm', 'APPPATH\\Views\\list\\view-listproduct.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\view-listproduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('list/view-listproduct', [], true)
+ 5 APPPATH\Controllers\ListController.php(1242): view('list/view-listproduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getViewListProduct('271')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

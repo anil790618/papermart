@@ -1,0 +1,252 @@
+ERROR - 2024-01-02 16:37:28 --> mysqli_sql_exception: Subquery returns more than 1 row in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('select ( select...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('select ( select...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('select ( select...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(75): CodeIgniter\Database\BaseConnection->query('select ( select...')
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(2393): App\Models\Main_model->getQueryAllData('select ( select...')
+#5 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-02 16:37:28 --> Call to a member function getNumRows() on bool
+in APPPATH\Models\Main_model.php on line 76.
+ 1 APPPATH\Controllers\ListController.php(2393): App\Models\Main_model->getQueryAllData(false)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getUserList()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:39:17 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:42:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:42:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:44:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:44:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:46:08 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:46:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:46:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:46:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:47:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:47:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:48:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2047.
+ 1 APPPATH\Controllers\ListController.php(2047): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2047)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:51:24 --> Undefined variable $quality
+in APPPATH\Controllers\ListController.php on line 2021.
+ 1 APPPATH\Controllers\ListController.php(2021): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quality', 'APPPATH\\Controllers\\ListController.php', 2021)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:53:26 --> Undefined variable $quality
+in APPPATH\Controllers\ListController.php on line 2021.
+ 1 APPPATH\Controllers\ListController.php(2021): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quality', 'APPPATH\\Controllers\\ListController.php', 2021)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:08 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:57:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListController.php on line 2048.
+ 1 APPPATH\Controllers\ListController.php(2048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ListController.php', 2048)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 16:58:42 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\ListController.php on line 2115.
+ 1 APPPATH\Controllers\ListController.php(2115): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->submitResponse()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-02 17:00:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 2 in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('select response...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('select response...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('select response...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(75): CodeIgniter\Database\BaseConnection->query('select response...')
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(1712): App\Models\Main_model->getQueryAllData('select response...')
+#5 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->getSendListResponse('267')
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-02 17:00:35 --> Call to a member function getNumRows() on bool
+in APPPATH\Models\Main_model.php on line 76.
+ 1 APPPATH\Controllers\ListController.php(1712): App\Models\Main_model->getQueryAllData(false)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ListController->getSendListResponse('267')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-02 17:40:03 --> mysqli_sql_exception: Column 'truck_ratio' cannot be null in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `wa...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wa...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wa...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wa...', Array, false)
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(8): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(793): App\Models\Main_model->insert_table('wastpaper_quali...', Array)
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->submitList()
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#8 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-02 17:55:09 --> mysqli_sql_exception: Unknown column 'confirm_counter_status' in 'field list' in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `respons...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `respons...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `respons...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `respons...', Array, false)
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(20): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ListController.php(3297): App\Models\Main_model->update_table('response_specif...', Array, 'id='184' and ad...')
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ListController->confirmcounterresponse_r()
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListController))
+#8 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-02 18:13:49 --> Undefined variable $listspecification
+in APPPATH\Views\purchase\purchase.php on line 145.
+ 1 APPPATH\Views\purchase\purchase.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listspecification', 'APPPATH\\Views\\purchase\\purchase.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\purchase\\purchase.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('purchase/purchase', [], true)
+ 5 APPPATH\Controllers\PurchaseController.php(118): view('purchase/purchase', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\PurchaseController->getPurchase()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-02 18:13:58 --> Undefined variable $listspecification
+in APPPATH\Views\purchase\purchase.php on line 145.
+ 1 APPPATH\Views\purchase\purchase.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listspecification', 'APPPATH\\Views\\purchase\\purchase.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\purchase\\purchase.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('purchase/purchase', [], true)
+ 5 APPPATH\Controllers\PurchaseController.php(118): view('purchase/purchase', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\PurchaseController->getPurchase()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-02 18:23:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by product_quality asc' at line 1 in E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from p...', 0)
+#1 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 E:\xampp\htdocs\maxmite_projects\papermart\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 E:\xampp\htdocs\maxmite_projects\papermart\app\Models\Main_model.php(75): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 E:\xampp\htdocs\maxmite_projects\papermart\app\Controllers\ProductController.php(1678): App\Models\Main_model->getQueryAllData('select * from p...')
+#5 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(925): App\Controllers\ProductController->getSearchByCategory()
+#6 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#7 E:\xampp\htdocs\maxmite_projects\papermart\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\maxmite_projects\papermart\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-02 18:23:14 --> Call to a member function getNumRows() on bool
+in APPPATH\Models\Main_model.php on line 76.
+ 1 APPPATH\Controllers\ProductController.php(1678): App\Models\Main_model->getQueryAllData(false)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ProductController->getSearchByCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
